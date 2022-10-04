@@ -1,0 +1,55 @@
+#sideNav .navbar-nav .nav-item .nav-link {
+  font-weight: bolder;
+}
+#sideNav .navbar-nav .nav-item .nav-link:hover {
+  color: #fff;
+}
+/* 职业技能部分 */
+h2.mb-5 {
+  font-weight: bold;
+}
+.skill {
+  margin-bottom: 20px;
+  width: 60%;
+}
+.h6.bs {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: .3rem;
+  color: #868e96;
+}
+.progress {
+  height: 0.6rem;
+  background-color: #d8d8d8;
+  display: flex;
+  overflow: hidden;
+  font-size: .75rem;
+  border-radius: .25rem;
+}
+.progress .bg-blue {
+  background-color: #2e96a5;
+}
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+/* 我的信息部分 */
+.subheading.mb-6 {
+  padding-top: 1rem;
+  text-transform: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+.subheading.mb-6 .fa {
+  width: 2.5rem;
+  text-align: center;
+}
+.subheading.mb-7 {
+  font-size: 2rem;
+  padding-left: 2rem;
+  font-weight: bold;
+}
