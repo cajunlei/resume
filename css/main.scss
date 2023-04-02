@@ -1,0 +1,250 @@
+@mixin mobile {
+  @media screen and (max-width:768px) {
+    @content;
+  }
+}
+
+:root {
+  --theme: #4c4c4c;
+  --padding-margin: 2em;
+  --width-tech: 9em;
+
+  @include mobile() {
+    --padding-margin: 1em;
+    --width-tech: 8em;
+  }
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+body {
+  line-height: 2;
+  margin: 0;
+  color: var(--theme);
+  font-size: 14px;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  margin: 5px 0;
+  background: var(--theme);
+}
+
+ol,
+ul {
+  padding-left: 1em;
+}
+
+table {
+  width: 100%;
+}
+
+.content {
+  padding: 0 var(--padding-margin);
+}
+
+#resume {
+  a {
+    text-decoration: none;
+    color: #888;
+  }
+
+  h2.title {
+    display: flex;
+    align-items: center;
+    color: var(--theme);
+    border-bottom: 3px solid;
+    margin: 1rem 0 10px;
+  }
+
+  .resume_top,
+  .resume_main {
+    padding: 0 var(--padding-margin);
+  }
+
+  .icon {
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-right: .5rem;
+    fill: var(--theme);
+  }
+
+  .resume_top {
+    font-size: 20px;
+    background: var(--theme);
+    color: white;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      font-weight: 600;
+
+      .icon {
+        position: relative;
+        left: -50px;
+        filter: drop-shadow(white 50px 0);
+      }
+    }
+
+    &>span {
+      @include mobile() {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .resume_info {
+    padding: 0 4rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+
+    @include mobile() {
+      padding: 0 2rem;
+      position: relative;
+    }
+
+    img {
+      border: 1px solid var(--theme);
+      width: 100px;
+      height: 130px;
+      border-radius: 8px;
+      object-fit: cover;
+
+      @include mobile() {
+        position: absolute;
+        right: 1em;
+        top: 0;
+      }
+    }
+
+    .info_list {
+      tbody {
+        tr {
+          @include mobile() {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+
+      span {
+        position: relative;
+        margin-right: 1rem;
+        display: inline-block;
+        width: 4.5em;
+        text-align: justify;
+        text-justify: distribute-all-lines;
+        text-align-last: justify;
+        text-justify: inter-word;
+        font-weight: bold;
+
+        &::after {
+          content: "：";
+          position: absolute;
+          right: -1.1rem;
+        }
+      }
+    }
+  }
+
+  .resume_main {
+    .resume_item {
+      .tech {
+        ul {
+          padding-left: 0;
+
+          li {
+            height: 3em;
+            display: flex;
+            align-items: center;
+
+            @include mobile() {
+              height: 2em;
+            }
+
+            p {
+              width: var(--width-tech);
+            }
+          }
+
+          .progress {
+            --height: 10px;
+            width: calc(100% - var(--width-tech));
+            height: var(--height);
+            border-radius: calc(var(--height) / 2);
+            background-color: #d8d8d8;
+
+            .progress-bar {
+              height: 100%;
+              text-align: right;
+              line-height: var(--height);
+              background: var(--theme);
+              border-radius: calc(var(--height) / 2);
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .work {
+        .work-info {
+          font-size: 18px;
+          font-weight: 600;
+          display: flex;
+          justify-content: space-between;
+
+          @include mobile() {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+              "header header"
+              "job date";
+
+            p {
+              margin: 0;
+
+              &.corporation {
+                grid-area: header;
+              }
+
+              &.job {
+                grid-area: job;
+              }
+
+              &.date {
+                grid-area: date;
+                text-align: right;
+              }
+
+              &:not(:first-child) {
+                font-size: 16px;
+                line-height: 1.5;
+              }
+            }
+          }
+        }
+
+        ul {
+          margin-left: var(--padding-margin);
+        }
+      }
+    }
+  }
+
+  .resume_bottom {
+    height: 2rem;
+    margin-top: var(--padding-margin);
+    background: var(--theme);
+  }
+}
