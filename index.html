@@ -11,35 +11,57 @@
 </head>
 
 <body>
-
+  <a id="print" class="print-hide" style="cursor:pointer;" onclick="javascript:window.print()">
+    <img src="./img/print.svg" title="打印简历">
+  </a>
   <div id="resume" class="container">
-
     <div class="resume_top">
-      <div><img class="icon" src="img/icon_resume.svg"><span>个人简历</span></div>
-      <span>求职意向：深化设计师</span>
+      <div><img class="icon print-hide" src="img/icon_resume.svg"><span>个人简历</span></div>
+      <span>求职意向：深化设计、施工员</span>
     </div>
 
     <div class="resume_info">
       <table class="info_list">
         <tr>
-          <td><span>姓名</span>雷相君</td>
-          <td><span>性别</span>男</td>
+          <td>
+            <span class="left">姓名</span>
+            <span class="right">雷相君</span>
+          </td>
+          <td><span class="left">性别</span>
+            <span class="right">男</span>
+          </td>
         </tr>
         <tr>
-          <td><span>年龄</span>28岁</td>
-          <td><span>学历</span>本科</td>
+          <td><span class="left">出生</span>
+            <span class="right">1994年4月</span>
+          </td>
+          <td><span class="left">学历</span>
+            <span class="right">本科</span>
+          </td>
         </tr>
         <tr>
-          <td><span>学校</span>电子科技大学</td>
-          <td><span>专业</span>环境艺术设计</td>
+          <td><span class="left">学校</span>
+            <span class="right">电子科技大学</span>
+          </td>
+          <td><span class="left">专业</span>
+            <span class="right">环境艺术设计</span>
+          </td>
         </tr>
         <tr>
-          <td><span>手机</span>182 9546 6417</td>
-          <td><span>邮箱</span><a href="mailto:i@ll.sc.cn" title="Email">i@ll.sc.cn</a></td>
+          <td><span class="left">手机</span>
+            <span class="right">182 9546 6417</span>
+          </td>
+          <td><span class="left">邮箱</span>
+            <a href="mailto:i@ll.sc.cn" title="Email"><span class="right">i@ll.sc.cn</span></a>
+          </td>
         </tr>
-        <tr>
-          <td><span>个人主页</span><a href="https://www.ll.sc.cn/">https://www.ll.sc.cn/</a></td>
-          <td><span>博客</span><a href="https://ll.sc.cn/">https://ll.sc.cn/</a></td>
+        <tr class="print-hide">
+          <td><span class="left">主页</span>
+            <a href="https://www.ll.sc.cn/" title="个人主页"><span class="right">https://www.ll.sc.cn/</span></a>
+          </td>
+          <td><span class="left">博客</span>
+            <a href="https://ll.sc.cn/" title="雷雷的个人博客"><span class="right">https://ll.sc.cn/</span></a>
+          </td>
         </tr>
       </table>
 
@@ -49,9 +71,9 @@
 
       <div class="resume_item">
         <h2 class="title"><img src="img/certificate.svg" class="icon" alt=""> 执业资格证书</h2>
-        <div class="content tech">
+        <div class="content certificate">
           <ul>
-            <li>二级建造师（建筑）</li>
+            <li>二级建造师（房建）</li>
           </ul>
         </div>
       </div>
@@ -81,19 +103,13 @@
             <li>
               <p>illustrator</p>
               <div class="progress">
-                <div class="progress-bar" style="width: 80%;"></div>
+                <div class="progress-bar" style="width: 75%;"></div>
               </div>
             </li>
             <li>
               <p>SketchUP</p>
               <div class="progress">
                 <div class="progress-bar" style="width: 70%;"></div>
-              </div>
-            </li>
-            <li>
-              <p>酷家乐 / 三维家</p>
-              <div class="progress">
-                <div class="progress-bar" style="width: 60%;"></div>
               </div>
             </li>
           </ul>
@@ -137,7 +153,7 @@
           <div>
             <div class="work-info">
               <p class="corporation">四川泥巴公社装饰设计有限责任公司</p>
-              <p class="job">深化设计师</p>
+              <p class="job">高级设计师</p>
               <p class="date">2017.3 — 2018.5</p>
             </div>
             <span>从接到客户信息开始与客户沟通，现场量房，了解客户需求，找准客户的痛点，解决客户的难点；完成方案、预算、效果图，见面沟通谈单签订合同；工地交底、跟进直到项目竣工。</span>
@@ -157,9 +173,8 @@
         <div class="content com">
           <ol>
             <li>实习师从龙发装饰别墅、大宅设计老师，后从事一年家装室内设计工作，后转型工程深化设计开始学习迈入工程管理工作；</li>
-            <li>五年工装项目工作经验，已熟悉行业工作，了解相关规范，学习能力强，能在短时间内适应新的环境;</li>
-            <li>进入工程管理工作后，利用闲余时间自学考试，取得二级建造师证书（建筑专业）；</li>
-            <li>计划能力强，善于总结，懂得高效工作，能够适应较复杂的工作环境；</li>
+            <li>五年工装项目工作经验，已熟悉行业工作，了解相关规范，能在短时间内适应新的环境；</li>
+            <li>自学能力强，进入工程管理工作后，利用闲余时间自学考试，取得二级建造师证书（建筑专业）；</li>
             <li>为人真诚，有良好的人际交往能力，善于沟通；</li>
             <li>有极强的责任心，对工作认真负责；</li>
             <li>上进心强，敢于接受挑战性工作。</li>
@@ -168,7 +183,7 @@
       </div>
     </div>
 
-    <div class="resume_bottom"></div>
+    <div class="resume_bottom print-hide"></div>
   </div>
 </body>
 
